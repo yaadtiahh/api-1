@@ -3,15 +3,14 @@ import requests
 from dotenv import load_dotenv
 from datetime import datetime
 
-load_dotenv()
-
-API_KEY = os.getenv("API_KEY")
-
 
 def main():
+    load_dotenv()
+    api_key = os.getenv("API_KEY")
+
     url = "https://calendarific.com/api/v2/holidays"
     payload = {
-      "api_key": API_KEY,
+      "api_key": api_key,
       "country": "RU",
       "year": "2025"
     }
